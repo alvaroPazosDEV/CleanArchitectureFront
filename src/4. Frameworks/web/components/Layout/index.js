@@ -10,7 +10,7 @@ const Layout = ({ title, children }) => {
       <div className='lo-box'>
         <div className='lo-header'>
           <img src={logo} />
-          <p>Clean Web</p>
+          <p>R PEDIDOS</p>
         </div>
         <div className='lo-body'>
           <h2>{title}</h2>

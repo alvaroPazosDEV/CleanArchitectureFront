@@ -20,12 +20,12 @@ const QueryOrder = ({ test, orderController }) => {
   }
 
   return (
-    <Layout title='Entregar orden'>
+    <Layout title='Consultar orden'>
       <div className='do-container'>
-        <p>En primer lugar, debe ingresar el número de orden de compra del cliente.</p>
+        <p>Ingrese el número de orden de compra del cliente.</p>
         <div className='do-search'>
           <Search
-            placeholder='Orden de compra'
+            placeholder='Ejm. 28763153'
             value={order}
             onChange={text => validateOrder(text)}
           />

@@ -5,11 +5,11 @@ module.exports = class OrderRepositoryService extends OrderRepository {
 
   constructor() {
     super()
-    this.url = 'http://localhost:3000/api'
+    this.BASE_URL = 'https://clean-backend-1997.herokuapp.com/api'
   }
 
   async getByNumber(orderNumber) {
-    const { data } = await axios.get(`${this.url}/order/${orderNumber}`)
+    const { data } = await axios.get(`${this.BASE_URL}/order/${orderNumber}`)
     if(!data) return null
     const order = {
       orderNumber: data.orderNumber,
