@@ -1,0 +1,139 @@
+.input-container {
+  background-color: var(--fondos-blanco);
+  width: 100%;
+  border: 1px solid var(--otros-border);
+  box-sizing: border-box;
+  border-radius: 12px;
+  overflow: hidden;
+  position:relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  &-error{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #F15B5B;
+    margin-left: .8em;
+    margin-top: .1em;
+  }
+  .input-button {
+    &-password {
+    cursor: pointer;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    > img {
+        width: 22px;
+        height: auto;
+      }
+    }
+    &-password.not-focused {
+      > img {
+        filter: invert(80%) sepia(10%) saturate(101%) hue-rotate(159deg) brightness(91%) contrast(97%);
+      }
+    }
+    &-add {
+      margin: 6px 6px 6px 0;
+      display: flex;
+      cursor: pointer;
+      > img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    &-add.disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+  }
+}
+
+.input-container:focus {
+  border: 1.2px solid var(--ripley-violeta) !important;
+}
+
+.pure-material-textfield-filled {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--fondos-blanco);
+}
+
+/* INPUT O TEXTAREA */
+.pure-material-textfield-filled > input,
+.pure-material-textfield-filled > textarea {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  border-top: solid 27px transparent;
+  padding: 0 12px 7px;
+  width: 100%;
+  height: inherit;
+  color: var(--textos-primario);
+  background-color: var(--fondos-blanco);
+  box-shadow: none; /* Firefox */
+  font-family: inherit;
+  font-size: 14px;
+  line-height: inherit;
+  caret-color: yellowgreen;
+  transition: border-bottom 0.2s, background-color 0.2s;
+}
+
+/* SPAN */
+.pure-material-textfield-filled > input + span,
+.pure-material-textfield-filled > textarea + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  box-sizing: border-box;
+  padding: 8px 12px 0;
+  color: var(--textos-secundario);
+  font-size: 12px;
+  line-height: 16px;
+  pointer-events: none;
+  transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+.pure-material-textfield-filled > input:not(:focus):placeholder-shown + span,
+.pure-material-textfield-filled > textarea:not(:focus):placeholder-shown + span {
+  font-size: inherit;
+  line-height: 36px;
+}
+
+.pure-material-textfield-filled > input:focus,
+.pure-material-textfield-filled > textarea:focus {
+  outline: none;
+}
+
+.pure-material-textfield-filled > input:focus + span,
+.pure-material-textfield-filled > textarea:focus + span {
+  color: var(--ripley-purpura);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+      .pure-material-textfield-filled > input,
+      .pure-material-textfield-filled > input + span,
+      .pure-material-textfield-filled > input + span::after,
+      .pure-material-textfield-filled > textarea,
+      .pure-material-textfield-filled > textarea + span,
+      .pure-material-textfield-filled > textarea + span::after {
+          transition-duration: 0.1s;
+      }
+  }
+}

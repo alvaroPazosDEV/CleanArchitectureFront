@@ -1,0 +1,62 @@
+.lo-container {
+  background-image: url('../../assets/images/bg-chat.jpg');
+  background-repeat: repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .lo-box {
+    background-color: white;
+    margin: 0 auto;
+    width: 600px;
+    height: 90%;
+    border-radius: 30px;
+    box-shadow: 0px 10px 10px -6px black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .lo-header {
+      font-size: 30px;
+      font-weight: 900;
+      background-color: rgb(236, 228, 236);
+      padding: 1em;
+      color: var(--ripley-violeta);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      > img {
+        width: 60px;
+        height: auto;
+      }
+      > p {
+        margin-left: 20px;
+      }
+    }
+    .lo-body {
+      flex:1;
+      padding: 20px 40px;
+      background-image: url('../../assets/images/bg_shape_dark_1080p.png');
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      > h2 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 900;
+      }
+    }
+    .lo-footer {
+      > img {
+        height: 30px;
+        width: 100%;
+        margin-bottom: -10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  .lo-box {
+    width: 80% !important;
+  }
+}
