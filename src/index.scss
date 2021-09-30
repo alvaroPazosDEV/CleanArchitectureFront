@@ -1,0 +1,87 @@
+:root {
+  --main-bg-color: #F2F4F9;
+  --ripley-guinda: #741472;
+  --ripley-amarillo: #FFD400;
+  --ripley-salmon: #F15B5B;
+  --ripley-rojo: #CE171E;
+  --ripley-plateado: #CFD4D8;
+  --ripley-purpura: #7C3F88;
+  --ripley-lavanda: #70578B;
+  --ripley-violeta: #5E388A;
+  --alt-morado: #9240C9;
+  --alt-violeta: #70578B;
+  --textos-primario: #333333;
+  --textos-secundario: #6A6A6A;
+  --textos-terciario: #999999;
+  --textos-negativo: #FFFFFF;
+  --fondos-blanco: #FFFFFF;
+  --fondos-hueso: #F8F8F8;
+  --fondos-gris-claro: #EFEFEF;
+  --otros-border: #CCCCCC;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Open Sans;
+  color: var(--main-global-color);
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: #eee !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888 !important;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./4.\ Frameworks/web/assets/fonts/OpenSans-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./4.\ Frameworks/web/assets/fonts/OpenSans-Light.ttf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./4.\ Frameworks/web/assets/fonts/OpenSans-SemiBold.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./4.\ Frameworks/web/assets/fonts/OpenSans-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./4.\ Frameworks/web/assets/fonts/OpenSans-ExtraBold.ttf');
+  font-weight: 900;
+}
